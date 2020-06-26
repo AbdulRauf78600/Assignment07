@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Calculator</title>
+
+<link rel="stylesheet" href="css/animate.css">
+
+<style>
+.btn { border:2px solid #000; padding:10px; background-color:#90F; width:40px; color:#FF0;}
+#clrr {border:2px solid #000; padding:10px; background-color:#90F; color:#FF0; width:40px;}
+fieldset{width:100px; border:8px double #F00;border-color: rgba(124,0,0,.7);
+	animation: fieldsetanimation 50s infinite;
+}
+ @keyframes fieldsetanimation {
+ 0% {
+border-color: rgba(124,0,0,.7);
+}
+ 20% {
+border-color: rgba(97,82,225,.7);
+}
+ 40% {
+border-color: rgba(130,3,55,0.70);
+}
+ 60% {
+border-color: rgba(4,25,183,.7);
+}
+ 80% {
+border-color: rgba(4,25,203,.7);
+}
+ 100% {
+border-color: rgba(255,111,2,.7);
+}
+}}
+
+.btn{
+	width: 122px;
+	padding: 10px 0px;
+	float: left;
+	font-size: 20px;
+	box-shadow: 0px 0px 10px 1px black;
+	color: white;
+	font-weight: bold;
+	background-color: transparent;
+	background-image: linear-gradient( rgba(124,0,0,.7), rgba(2,0,0,.7));
+	border: none;
+	margin: 2px;
+	animation: buttonanimation 50s infinite;
+	animation-delay: 2s;
+	animation-timing-function: ease;
+}
+#txt1{height:20px; border:2px solid #000;}
+div{margin-left:40%; margin-top:5%;}
+html {
+	height: 100%;
+	width: 100%;
+}
+body {
+	
+	height: 100%;
+	position: relative;
+
+	animation: sectionanimation 50s infinite;
+}
+ @keyframes sectionanimation {
+ 0% {
+background: url(1.jpg);
+}
+ 20% {
+background: url(2.jpg);
+}
+ 40% {
+background: url(3.jpg);
+}
+ 60% {
+background: url(4.jpg);
+}
+ 80% {
+background: url(5.jpg);
+}
+ 100% {
+background: url(6.jpg);
+}
+}
+#txt1{
+	width: 357px;
+	background-color: rgba(0,0,0,.5);
+	font-size: 24px;
+	color: white;
+	margin: 10px 0px;
+	border: none;
+	padding: 10px;
+}
+.btn {
+	width:90px;
+	padding: 10px 0px;
+	float: left;
+	font-size: 20px;
+	box-shadow: 0px 0px 10px 1px black;
+	color: white;
+	font-weight: bold;
+    background-color:transparent;
+	border: none;
+	margin: 2px;
+	animation: buttonanimation 50s infinite;
+	animation-delay: 2s;
+	animation-timing-function: ease;
+}
+ @keyframes buttonanimation {
+ 0% {
+background-image: linear-gradient( rgba(124,0,0,.7), rgba(2,0,0,.7));
+}
+ 20% {
+ background-image: linear-gradient( rgba(97,82,225,.7), rgba(2,0,0,.7));
+}
+ 40% {
+ background-image: linear-gradient( rgba(130,3,55,0.70), rgba(2,0,0,.7));
+}
+ 60% {
+ background-image: linear-gradient( rgba(4,25,183,.7), rgba(2,0,0,.7));
+}
+ 80% {
+ background-image: linear-gradient( rgba(4,25,203,.7), rgba(2,0,0,.7));
+}
+ 100% {
+ background-image: linear-gradient( rgba(255,111,2,.7), rgba(2,0,0,.7));
+}
+}
+</style>
+
+<script>
+ 
+ var n;
+function dis(n){
+	
+   frm.txt.value= frm.txt.value+n;
+	
+	}
+function delbtn(){
+	n=frm.txt.value;
+	n = n.substr(0,n.length-1);
+		frm.txt.value = n;
+	
+	}
+	
+function sqr(n){ frm.txt.value=n*n; }	
+
+function cub(n){ frm.txt.value=n*n*n; }	
+
+
+function clear()
+{
+	frm.txt.value="0";
+	}	
+		
+	
+
+</script>
+</head>
+
+<body>
+
+<div class="wow zoomIn" style="margin-left:450px; margin-top:140px;">
+<fieldset> 
+<legend><b style="font-size:20px; color:white;font-weight:bold;">Calculator</b></legend>
+<br />
+<form name="frm">
+   <input type="text" name="txt" id="txt1"  /><br /><br />
+   <input type="button" class="btn  name="btn9" value="9" onclick="dis('9')" />
+   <input type="button" class="btn"  name="btn8" value="8" onclick="dis('8')" />
+   <input type="button" class="btn"  name="btn7" value="7" onclick="dis('7')" />
+   <input type="button" class="btn"  name="btnad" value="+" onclick="dis('+')"  /><br /><br />
+   
+   <input type="button" class="btn"  name="btn6" value="6" onclick="dis('6')"  />
+   <input type="button" class="btn"  name="btn5" value="5" onclick="dis('5')"  />
+   <input type="button" class="btn"  name="btn4" value="4" onclick="dis('4')"  />
+   <input type="button" class="btn"  name="btnsb" value="-" onclick="dis('-')"  /><br /><br />
+   
+   <input type="button" class="btn"  name="btn3" value="3" onclick="dis('3')"  />
+   <input type="button" class="btn"  name="btn2" value="2" onclick="dis('2')"  />
+   <input type="button" class="btn"  name="btn1" value="1"  onclick="dis('1')" />
+   <input type="button" class="btn"  name="btnmul" value="*"  onclick="dis('*')" /><br /><br />
+   
+   <input type="button" class="btn"  name="btnX" value="X"  onclick="delbtn()" />
+   <input type="button" class="btn"  name="btn0" value="0" onclick="dis('0')"  />
+   <input type="button" class="btn"  name="btn." value="." onclick="dis('.')"  />
+   <input type="button" class="btn"  name="btn=" value="=" onclick="frm.txt.value=eval(frm.txt.value)"  /><br /><br />
+   
+   <input type="reset" name="clr"  class="btn" value="C" onclick="clear()"  />
+   <input type="button" class="btn"  name="btn0" value="x^2" onclick="sqr(frm.txt.value)"  />
+     <input type="button" class="btn"  name="btn0" value="x^3" onclick="cub(frm.txt.value)"  />
+     <input type="button" class="btn"  name="btnmul" value="/"   onclick="dis('/')" />
+   
+   
+
+</form>
+</fieldset>
+</div>
+</div>
+
+ <script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>
+</body>
+</html>

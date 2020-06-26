@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="css/animate.css">
+<title>Pre-Loader</title>
+<style>
+
+body{ background-image:url(3.jpg);background-size:cover;}
+.video_slc{ position:fixed;right:0;bottom:0;min-width:100%;min-height:100%;width:auto;height:auto;z-index:-999; }
+div{ font-family:Verdana, Geneva, sans-serif;font-weight:900;color:#FFF;text-align:center;margin-top:300px;}
+button{ background:transparent; border-radius:10px; border:3px solid black;}
+button a{ font-size:25px; color:#FFF;text-decoration:none; }
+marquee{ animation:mar ease-in-out 2s ;}
+@keyframes example{
+0%   {background-color:red; left:0px; top:0px;}
+  25%  {background-color:yellow; left:200px; top:0px;}
+  50%  {background-color:blue; left:200px; top:200px;}
+  75%  {background-color:green; left:0px; top:200px;}
+  100% {background-color:red; left:0px; top:0px;}
+}
+
+button {
+  width: 140px;
+  height: 40px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-delay:3s;
+}
+
+h1 {
+  font-size: 40px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+
+
+
+</style>
+</head>
+
+<body>
+
+
+
+<div>
+
+<h1><p class="wow flip">Calculator</p></h1>
+<marquee direction="right" behavior="slide"  scrolldelay="200" style= "width:300px; margin-left:-200px;" ><button ><a href="calculator.html" class="wow flip">Let's Move</a></button></marquee>
+</div>
+
+ 
+
+<script src="js/wow.min.js"></script>
+              <script>
+              new WOW().init();
+              </script>        
+</body>
+</html>
